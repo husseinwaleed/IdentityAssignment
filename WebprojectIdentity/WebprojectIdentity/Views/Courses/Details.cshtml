@@ -1,0 +1,43 @@
+﻿@model WebprojectIdentity.Models.Course
+@using WebprojectIdentity.Models
+@{
+    ViewBag.Title = "Details";
+
+
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.coursename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coursename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.periode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.periode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.teacher.firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.teacher.firstname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
